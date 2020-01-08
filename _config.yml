@@ -1,1 +1,15 @@
-theme: jekyll-theme-slate
+title: Macroevolution 2020
+author: Tracy Heath
+email: phylo@iastate.edu
+description: > # this means to ignore newlines until "baseurl:"
+  A Course on Macroevolution at Iowa State University
+
+twitter_username: trayc7
+github_username:  EEOB-Macroevolution
+
+future: true
+
+logo: "/assets/trilo.png"
+
+sass:
+    style: compressed
