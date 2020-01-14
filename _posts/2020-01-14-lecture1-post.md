@@ -16,4 +16,4 @@ For this lecture, we will be introducing you to the course material and what we 
 
 <h5>Lecture Slides</h5>
 
-A PDF of the lecture slides can be found in the "Lecture and Theory Slides" module on [Canvas](https://canvas.iastate.edu/courses/46870).
+A PDF of the lecture slides can be found in the "Lecture and Theory Slides" module on [Canvas](https://canvas.iastate.edu/courses/68351).
