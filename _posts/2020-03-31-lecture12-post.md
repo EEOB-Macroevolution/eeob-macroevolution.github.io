@@ -9,6 +9,8 @@ ptype: lecture
 
 This lecture will cover approaches to estimating ancestral values for discrete and continuous characters.
 
+NOTE: lecture is in video format, and is found on the Panopto link of our Canvas page (link on the left-hand side). 
+
 
 ##### Readings
 
