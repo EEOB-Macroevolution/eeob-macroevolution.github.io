@@ -17,6 +17,10 @@ NOTE: lecture is in video format, and is found on the Panopto link of our Canvas
 
 [https://eeob-macroevolution.github.io/EEOB565X-Spring2020/practicals/06-AncStateEstimation.html](https://eeob-macroevolution.github.io/EEOB565X-Spring2020/practicals/06-AncStateEstimation.html)
 
+##### Meeting Link
+
+To find the link to the virtual meeting where we will be available for Q&A, please go to the module in Canvas: [https://canvas.iastate.edu/courses/68351/pages/mar-26-practical-hangout-ancestral-state-estimation](https://canvas.iastate.edu/courses/68351/pages/mar-26-practical-hangout-ancestral-state-estimation)
+
 ##### Software
 
 Please be sure that you have RStudio installed (see [Software](https://eeob-macroevolution.github.io//Software) for details). 
