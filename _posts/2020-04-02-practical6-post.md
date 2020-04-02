@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Practical: Ancestral State Estimation"
+title: "Practical: State-Dependent Diversification"
 ptype: practical
 ---
 
