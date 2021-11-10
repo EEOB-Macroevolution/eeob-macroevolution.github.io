@@ -8,4 +8,4 @@ Tuesday & Thursday, 2:10 - 3:30 PM in 203 Bessey Hall
 
 Instructors: Dr. [Dean Adams](http://www.public.iastate.edu/~dcadams/) and Dr. [Tracy Heath](http://phyloworks.org/)
 
-Spring Semester, 2020
+Spring Semester, 2022
