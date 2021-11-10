@@ -6,7 +6,7 @@ permalink: /About/
 
 <h1 class="page-title">{{ page.title | escape }}</h1>
 
-BIOL 465X/EEOB 565X - Macroevolution, Spring 2020
+BIOL 465X/EEOB 565X - Macroevolution, Spring 2022
 
 Instructors: Dr. Dean Adams and Dr. Tracy Heath
 
