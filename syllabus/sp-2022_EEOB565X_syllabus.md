@@ -1,4 +1,5 @@
-## BIOL 465X/EEOB 565X, Macroevolution<br> Spring 2022 Syllabus
+## Syllabus 
+## BIOL 465X/EEOB 565X, Macroevolution Spring 2022 
 #### Tuesday/Thursday, 2:10-3:30p.m., Bessey Hall 203
 
 ### Course Website
