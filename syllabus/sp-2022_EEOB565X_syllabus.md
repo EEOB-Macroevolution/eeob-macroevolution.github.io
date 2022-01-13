@@ -1,4 +1,4 @@
-## BIOL 465X/EEOB 565X, Macroevolution<br> Spring 2022 
+## BIOL 465X/EEOB 565X, Macroevolution<br> Spring 2022 Syllabus
 #### Tuesday/Thursday, 2:10-3:30p.m., Bessey Hall 203
 
 ### Course Website
@@ -23,7 +23,8 @@ All office hours are by appointment.
 
 ### Course Description
 
-The history and diversity of life on earth; evolutionary patterns and processes above the species level. Examine diversity from a phylogenetic perspective. Empirical exercises include: phylogeny estimation, ancestral states, estimating diversification rates, evaluating the tempo and mode of evolution, biogeographic patterns, and trait associations across the tree of life. (Cr. 3. Prereq.: Biol 315)
+The history and diversity of life on earth; evolutionary patterns and processes above the species level. Examine diversity from a phylogenetic perspective. Empirical exercises include: phylogeny estimation, ancestral states, estimating diversification rates, evaluating the tempo and mode of evolution, biogeographic patterns, and trait associations across the tree of life. 
+(Cr. 3. Prereq.: Biol 315)
 
 **Format:** This course will be held in person unless otherwise specified. 
 
