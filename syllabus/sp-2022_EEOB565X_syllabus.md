@@ -1,7 +1,7 @@
-# BIOL 465X/EEOB 565X, Macroevolution<br> Spring 2022 
-### Tuesday/Thursday, 2:10-3:30p.m., Bessey Hall 203
+## BIOL 465X/EEOB 565X, Macroevolution<br> Spring 2022 
+#### Tuesday/Thursday, 2:10-3:30p.m., Bessey Hall 203
 
-## Course Website
+### Course Website
 
 [https://eeob-macroevolution.github.io](https://eeob-macroevolution.github.io)
 
@@ -14,24 +14,24 @@ We will also provide some information via the course Canvas page (for content th
 [https://canvas.iastate.edu/courses/89027](https://canvas.iastate.edu/courses/89027) 
 
 
-## Instructors
+### Instructors
 
 All office hours are by appointment. 
 
 * Dr. Dean Adams ([dcadams@iastate.edu](mailto:dcadams@iastate.edu))
 * Dr. Tracy Heath ([phylo@iastate.edu](mailto:phylo@iastate.edu))
 
-## Course Description
+### Course Description
 
 The history and diversity of life on earth; evolutionary patterns and processes above the species level. Examine diversity from a phylogenetic perspective. Empirical exercises include: phylogeny estimation, ancestral states, estimating diversification rates, evaluating the tempo and mode of evolution, biogeographic patterns, and trait associations across the tree of life. (Cr. 3. Prereq.: Biol 315)
 
 **Format:** This course will be held in person unless otherwise specified. 
 
-## Course Materials
+### Course Materials
 
 Readings from the primary literature, lecture slides, and tutorials will all be distributed on the course website: [https://eeob-macroevolution.github.io](https://eeob-macroevolution.github.io) 
 
-## Course Outcomes
+### Course Outcomes
 
 Upon completion of the course, students will: 
 
@@ -40,7 +40,7 @@ Upon completion of the course, students will:
 - Become familiar with ‘tree thinking’, and understand the principles of using a phylogenetic perspective to address evolutionary questions in biology
 - Gain experience in applying cutting-edge phylogenetic methods for testing hypotheses in macroevolution
 
-## Course Objectives
+### Course Objectives
 
 - Be able to explain the history of life on earth, including major extinction events
 - Know the concepts of gradualism, stasis, and punctuated equilibrium and their importance
@@ -50,7 +50,18 @@ Upon completion of the course, students will:
 - Understand the major macroevolutionary models of trait evolution, including Brownian motion, Ornstein-Uhlenbeck, and early-burst models
 - Know how to implement the phylogenetic comparative method for evaluating macroevolutionary trends across a phylogeny
 
-## Grading
+
+### Course Schedule
+
+A detailed schedule the course can be found here:
+
+[https://docs.google.com/spreadsheets/d/1Kpu24NKe0pVijRrrB_FXaDph3pNkn0N4iB-KqAoamME/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Kpu24NKe0pVijRrrB_FXaDph3pNkn0N4iB-KqAoamME/edit?usp=sharing)
+
+Additionally, we will provide links to slides and other information on the course website activities page:
+
+[https://eeob-macroevolution.github.io/Activities](https://eeob-macroevolution.github.io/Activities/)
+
+### Grading
 
 Final grades will be based on three main course components, with undergraduates and graduate students evaluated using separate criteria for participation and the final project.
 
@@ -70,16 +81,6 @@ Research projects will be conducted during the second half of the course. After 
 2. A 10-minute presentation (with 2 minutes for questions), these presentations will be given to the entire class on May 3rd and 5th.
 3. All data and script files needed to execute the analyses (graduate students).
 
-
-## Course Schedule
-
-A detailed schedule the course can be found here:
-
-[https://docs.google.com/spreadsheets/d/1Kpu24NKe0pVijRrrB_FXaDph3pNkn0N4iB-KqAoamME/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Kpu24NKe0pVijRrrB_FXaDph3pNkn0N4iB-KqAoamME/edit?usp=sharing)
-
-Additionally, we will provide links to slides and other information on the course website activities page:
-
-[https://eeob-macroevolution.github.io/Activities](https://eeob-macroevolution.github.io/Activities/)
 
 
 
