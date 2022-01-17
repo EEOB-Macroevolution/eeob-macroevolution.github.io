@@ -5,14 +5,27 @@ icon-style: brands
 order: 3
 ---
 
-
-## Dr. Dean Adams
-
-<div class="4u 12u$(mobile)">
+<!-- <div class="row">
+<div class="col-md-3">
+    <center><img class="image fit" src="{{ 'assets/images/tah.jpeg' | relative_url }}" alt="">
+    <h3>Tracy Heath</h3>
+	<h4>Principal Investigator</h4>
+</div>
+</div>
+ -->
+<div class="row">
 	<div class="item">
-		<a href="#" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
+		<a href="#" class="image fit"><img src="{{ 'assets/images/dca.jpg' | relative_url }}" alt="Dr. Dean Adams" /></a>
 		<header>
-		  <h3>Ipsum Feugiat</h3>
+		  <h3>Dr. Dean Adams</h3>
+		  <p><a href="mailto:dcadams@iastate.edu"><i class="fas fa-envelope"></i></a>   <a href="https://faculty.sites.iastate.edu/dcadams/"><i class="fas fa-globe"></i></a>  <a href="https://github.com/deanadams"><i class="fab fa-github-square"></i></a></p>
+		</header>
+	</div>
+	<div class="item">
+		<a href="#" class="image fit"><img src="{{ 'assets/images/tah.jpeg' | relative_url }}" alt="Dr. Dean Adams" /></a>
+		<header>
+		  <h3>Dr. Tracy Heath</h3>
+		  <p><a href="mailto:phylo@iastate.edu"><i class="fas fa-envelope"></i></a>    <a href="http://phyloworks.org/"><i class="fas fa-globe"></i></a>  <a href="https://github.com/trayc7"><i class="fab fa-github-square"></i></a> <a href="https://twitter.com/trayc7"><i class="fab fa-twitter"></i></a></p>
 		</header>
 	</div>
 </div>
