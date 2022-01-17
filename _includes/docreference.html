@@ -1,0 +1,47 @@
+{%- comment -%}
+  Include vars:
+	title: title of section (page in a collection) to display
+  subtitle
+	auto-header
+	content
+  collection: collection to which the section belongs.
+  categories: List of categories the section belongs to.
+  linktofullpage: if true, links are url to the full page, if false are slug bookmarks in current page
+{%- endcomment -%}
+
+{%- assign _title = include.title | default: 'Untitled' -%}
+{%- assign _slug = include.title | strip_html | slugify | default: 'untitled' -%}
+{%- capture _class -%}shade-{%- cycle  'three', 'four', 'tree' -%}{%- endcapture -%}
+
+{%- if include.auto-header == 'none' -%}
+	{%- assign _heading = "" -%}
+{%- else -%}
+  {%- if linktofullpage -%}
+    {%- assign _linkurl= page.url -%}
+  {%- else -%}
+    {%- assign _linkurl= _slug | prepend: '#' -%}
+  {%- endif -%}
+	{%- capture _heading -%}
+		<header>
+        <h4>
+        <a href= "{{ _linkurl }}">
+        {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
+          {{- _title -}}
+        {%- else -%}
+          {{- include.auto-header -}}
+        {%- endif -%}
+        </a>
+      <br/>
+      {%- if include.subtitle -%}{{- include.subtitle -}}<br/>{%- endif -%}
+      {%- include categoriesbar.html collection= include.collection categories= include.categories -%}
+      </h4>
+		</header>
+	{%- endcapture -%}
+{%- endif -%}
+
+<section id="{{- _slug -}}" class="{{- _class -}}">
+  <div class="refContainer">
+    {{- _heading -}}
+    {{- include.content -}}
+  </div>
+</section>

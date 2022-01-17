@@ -1,8 +1,27 @@
 ---
 layout: default
 ---
-<div class="container">
+{%- include parse-theme-options.html -%}
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+	{%- assign _sections = _collection.docs | sort: 'order' -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+	{%- assign _sections = nil -%}
+{%- endif -%}
+{%- include header.html items_nav=_sections linktofullpage= true -%}
 
-    {{ content }}
-
+<!-- Main -->
+<div id="main">
+	<!-- Page -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="{{- page.url -}}">{{- page.title -}}</a></h2>
+				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
+        {%- include categoriesbar.html categories= page.categories -%}
+			</header>
+	    {{- content -}}
+	  </div>
+	</article>
 </div>

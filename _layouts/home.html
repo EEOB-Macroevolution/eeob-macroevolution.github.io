@@ -1,95 +1,30 @@
 ---
 layout: default
 ---
+{%- include parse-theme-options.html -%}
 
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h3 class="header center orange-text">{{ site.title }}</h3>
-      <div class="row center">
-        <h5 class="header col s12 light">{{ content }}</h5>
-      </div>
-<!--         
-      <div class="row center">
-        <a href="https://docs.google.com/spreadsheets/d/1RCZk2wY5Ty2JRhTjZ1keajfJ_N4UmzgIRh3KT5Px9zg/edit?usp=sharing" id="download-button" class="btn-large waves-effect waves-light orange">Course Schedule</a>
-      </div>
-      <br><br>
- -->
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-grey-text"><i class="material-icons">description</i></h2>
-            <h5 class="center">Readings</h5>
-
-            <p class="light">This course requires a heavy amount of reading. We have provided PDFs of all papers and book chapters on the <a href="https://canvas.iastate.edu">Canvas</a> site. Additionally, you will find links to the online versions in the dated <a href="Activities">Class Activities</a>.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-grey-text"><i class="material-icons">laptop_mac</i></h2>
-            <h5 class="center">Practicals</h5>
-
-            <p class="light">The second half of this course will be a series of workshops covering applications in phylogenetic methods for macroevolution. Please come to class prepared to complete the tutorial with your own laptop. (If you do not have access to a laptop, please contact the instructors and one may be provided for you for use during class time.)</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-grey-text"><i class="material-icons">star</i></h2>
-            <h5 class="center">Grades</h5>
-
-            <p class="light">Students will be evaluated on their performance in three components of the course: (1) a midterm exam, (2) participation, and (3) the final project. For deteails, please see the course <a href="">syllabus</a>.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-      
-    </div>
-    <div style="background: #ddd">
-    <div class="container last-post">
-    <section>
-        <h5>Class Activities</h5>
-        <ul class="collection">
-        {% for post in site.posts %}
-        <li class="collection-item avatar">
-          {% assign date_format = site.minima.date_format | default: "%m/%d" %}
-          {% if post.ptype == "discussion" %}
-          <div class="date-post indigo darken-4">{{ post.date | date: date_format }}</div>
-          {% elsif post.ptype == "lecture" %}
-          <div class="date-post pink darken-3">{{ post.date | date: date_format }}</div>
-          {% elsif post.ptype == "theory" %}
-          <div class="date-post deep-orange">{{ post.date | date: date_format }}</div>
-          {% elsif post.ptype == "practical" %}
-          <div class="date-post green darken-3">{{ post.date | date: date_format }}</div>
-          {% elsif post.ptype == "exam" %}
-          <div class="date-post grey darken-3">{{ post.date | date: date_format }}</div>
-          {% endif %}
-          <span class="title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
-          <p>
-             {{ post.reading | truncatewords: 20 }}
-          </p>
-          <a href="{{ post.url | relative_url }}" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        {% endfor %}
-        </ul>  
-    </section>
-    </div>
-</div>
-
-  </div>
-<div style="background: #27A59A">
-  <center><h5 class="white-text">Theme Song: "Extinction" by Graham Pugh</h5></center>
-</div>
-<div style="background: #27A59A">
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/297944078&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
-<!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/297944078&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+{%- endif -%}
+{%- assign _sections = _collection.docs |sort: 'order' -%}
+{%- include header.html items_nav=_sections -%}
+{%- assign _output= _collection.output | default: false -%}
+<!-- Main -->
+<div id="main">
+	{%- if page.content != "" -%}
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	{%- endif -%}
+	<!-- Sections -->
+	{%- for _section in _sections -%}
+    {%- if _output  -%}
+      {%- capture _excerpt -%}<p>{{- _section.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+      {%- capture _link -%}<a href="{{- _section.url -}}">{{- _themeOp_readmorelabel -}}</a>{%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage= true -%}
+    {%- else -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content collection= _collection.label categories= _section.categories -%}
+    {%- endif -%}
+	{%- endfor -%}
 </div>

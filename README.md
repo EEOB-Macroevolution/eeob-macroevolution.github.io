@@ -1,41 +1,90 @@
-# BIOL 465X/EEOB 565X - Macroevolution, Spring 2020
+# Multiple collection Modified Prologue - Jekyll Theme
+
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-prologue.svg)](https://badge.fury.io/rb/jekyll-theme-prologue)
+
+![Prologue Theme](assets/images/screenshot.png "Prologue Theme Screenshot")
 
 
-### Instructors: Dr. Dean Adams and Dr. Tracy Heath
+This theme is a modified version of the jekyll theme [Prologue](https://github.com/chrisbobbe/jekyll-theme-prologue).
 
-### Tuesday & Thursday, 2:10 - 3:30 PM in 203 Bessey Hall
+The installation and configuration of the theme is similar to the original one.
 
-[Course Syllabus]()
+## Additions and modifications to original theme
 
-## Course Description
+The additions to the original theme are:
 
-Evolutionary thinking provides the underpinnings of modern biology. In recent decades, the field of macroevolution (evolution above the species level) has matured into a rich discipline with a well-developed mathematical theory for testing hypotheses of species diversification, for understanding trait evolution, and evaluating patterns of covariation across the tree of life. This course will provide a synthetic view of biology and how life on earth has changed over time.
+* Multiple collection management if desired.
+* sections of each collection may be full rendered in one page (as in the original theme) or you may choose to generate separate full pages and a collection page with excerpts of each section (page) and a follo up link.
+* I have include support to LaTeX equiations display using mathjax.
+* Section content and excerps in the collection scrolling page is displayed left justify instead of centered.
+* I have stablished Form Matter defaults in the _config.yml file in order use correct layouts (page,post and draft) when a file in a collection does not declare a layout in its Form Matter.
 
-Through a combination of lectures and computational exercises, students will become familiar with the foundational concepts of macroevolution. They will understand patterns of diversity in the fossil record, the major changes in that diversity over time. Students will be immersed in ‘tree thinking’, where a phylogenetic perspective is exploited to understand patterns of diversity, and testing hypotheses of how species and trait diversity changes through time. Computational exercises will reinforce lecture topics and discussion of recent research. Hands-on training will put these concepts into applied practice to test biological hypotheses and provide students with experience using software tools for macroevolutionary analysis.
+## changing 'read more' label
 
-## Course Topics
-
-#### Conceptual Topics:
-* Patterns in the fossil record
-* Lineage Diversification
-* Mass extinctions and extinction rates
-* Trait evolution: tempo and mode
-* Gradualism, stasis, and punctuated equilibrium
-* Tree thinking, phylogeny reconstruction using basic approaches
-* Trait comparisons, trait evolution on phylogenies
-* Statistical methods for inferring phylogenies
-
-#### Practical Exercises
-* Inferring dated phylogenies
-* Methods for detecting variation in rates of diversification
-* Testing hypotheses about correlations among traits
-* Ancestral state reconstruction
-* Biogeography: ancestral area reconstruction
-* Modeling the tempo and mode of continuous character evolution
-* Understanding multivariate trait evolution
+In order to change the give the user the oportunity to change 'read more' label associated to links generated in excerpts of pages and posts, I have created a them configurations variable.
+You can change it in '_config.yml' file in the section theme-options.
+```
+theme-options:
+  readmorelabel: "what ever you want"
+```
 
 
-## Course Schedule
+## How to configure multiple collections
 
-The up-to-date schedule of course topics and activites can be found here:
-[schedule link](https://docs.google.com/spreadsheets/d/1SDnp_Pp_rqobAC9v-gQFYU7wFjbSl5tP2ASdVnWwP2k/edit?usp=sharing)
+You can create as many collections as you want.
+
+You have to declare them in the collecions section of your '_config.yml' file.
+
+For example:
+
+THe default configuration of this theme declares two collections in th config file, sections and others:
+
+
+```
+  collections:
+    sections:
+      output: false
+    others:
+      output: true
+```
+
+sections collection behaves just like the one in the original Prologue theme.
+It renders all its sections in one page and does not create a _sections subdirectory.
+You can read the full content of each section in the single index.html page that it renders.
+
+In order to get this you specify output: false or just don't specify output at all.
+
+others collection renders generates each page separately, in the _others directory and generates a excerpt of each section in the others.html file witha "Read more" link to read the full content.
+
+You need page for each collection, with just the [Front Matter](https://jekyllrb.com/docs/front-matter/)
+
+index.md for the *sections* collection, with this Front Matter:
+```
+---
+layout: home
+title: My Great Homepage
+icon: fa-home
+order: 1
+---
+```
+
+You have to declare a home layout, that renders the scrolling page with the sections content.
+There is no collection entry, or alternatively you can declarre collection to be 'sections'.
+
+others.md for the *others* collection, with this Front Matter:
+```
+---
+layout: home
+collection: others
+title: Other sections
+icon: fa-hotel
+order: 2
+---
+```
+
+You declare a **home** *layout* in order to get others.html scrolling page with sections content of *others* collection.
+
+You must declare 'collection: others' in order to get the pages list of the others collection.
+If you omit it you will get a duplicate of the pages in *sections* collection, which is the default.
+
+As others collection has been declared with 'output: true' in the config file, you will get a scrolling page with excerpts and "read me" links that point to the full page content.

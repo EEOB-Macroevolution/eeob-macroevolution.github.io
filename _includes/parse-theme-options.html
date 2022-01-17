@@ -1,0 +1,22 @@
+{%- comment -%}
+This file parses the variables in site.theme-options created in the and stablishes
+appropiate defaults for variables that are not stablished in the config file.
+It makes easier to assume that a theme-option variable exist.
+
+It creates a variable _parsedThemeOp with corresponding parsed vars.
+{%- endcomment -%}
+<!-- get the label to use in read more links if one is configured in _config.yml -->
+{%- assign _themeOp_readmorelabel = site.theme-options.readmorelabel |escape_once |default: "Read more" -%}
+{%- assign _themeOp_categorieslabel= site.theme-options.categorieslabel  | escape_once |default: "Categories"-%}
+
+{%- if site.theme-options.categoriespage and site.theme-options.categoriespage != "" -%}
+  {%- assign _themeOp_categoriespage= site.theme-options.categoriespage | escape_once -%}
+{%- else -%}
+  {%- assign _themeOp_categoriespage= _themeOp_categorieslabel |downcase -%}
+{%- endif -%}
+{%- comment -%}
+In include parse-theme-options.html<br />
+_themeOp_readmorelabel: {{ _themeOp_readmorelabel }}<br />
+_themeOp_categorieslabel: {{ _themeOp_categorieslabel }}<br />
+_themeOp_categoriespage: {{ _themeOp_categoriespage }}<br />
+{%- endcomment -%}

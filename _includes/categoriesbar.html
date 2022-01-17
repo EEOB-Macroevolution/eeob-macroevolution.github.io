@@ -1,0 +1,15 @@
+{%- comment -%}
+  Creates bar of categories
+  Include vars:
+  collection: collection to which should point the generated links
+  categories: list of categories to generate the bar.
+{%- endcomment -%}
+
+{%- if include.categories and include.categories.size !=0 -%}
+    <p>{{ _themeOp_categorieslabel }}: /
+    {%- for _cat in include.categories -%}
+         <a href= "/{{- _themeOp_categoriespage -}}#{{- include.collection -}}/{{- _cat -}}">  {{ _cat }} </a>/
+    {%- endfor -%}
+    </p>
+  </header>
+{%- endif -%}

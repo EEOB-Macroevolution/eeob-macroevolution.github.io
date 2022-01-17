@@ -1,0 +1,42 @@
+{%- comment -%}
+  Create the elements of the navigator bar
+
+  Include vars:
+  navtype: Tipo de elementos de navegación a generar (categories or tags)
+{%- endcomment -%}
+
+{%- unless site.collections == null -%}
+  {% if include.navtype == "tags" -%}
+    {%- assign _icon= "fa-tags" -%}
+    {%- assign _iconCat= "fa-tag" -%}
+  {%- else -%}
+    {%- assign _icon= "fa-folder" -%}
+    {%- assign _iconCat= "fa-file" -%}
+  {%- endif -%}
+  <!-- NavList -->
+  <nav id="nav">
+  <ul>
+    {%- for _col in site.collections -%}
+    {%- capture _bookmark -%}
+      {{- page.url -}}#{{- _col.label -}}
+    {%- endcapture -%}
+    <hr>
+    <li><a href= "{{- _bookmark -}}" id= "{{- _bookmark -}}-link" class="scrolly"><span class="{{ _class }} {{ _icon }}">{{- _col.label -}}</span></a>
+    </li>
+    <hr>
+    <nav id="nav">
+    <ul>
+    {%- assign _cats= _col.docs| map: include.navtype | join: ','  | split: ','  | group_by: category -%}
+    {%- for _cat in _cats -%}
+      {%- capture _bookmark -%}
+        {{- page.url -}}#{{- _col.label -}}/{{- _cat.name -}}
+      {%- endcapture -%}
+      <li><a href= "{{- _bookmark -}}" id= "{{- _bookmark -}}-link" class="scrolly"><span class="{{ _class }} {{ _iconCat }}">{{- _cat.name -}}</span></a>
+      </li>
+    {%- endfor -%}
+    </ul>
+    </nav>
+  {%- endfor -%}
+  <ul>
+  </nav>
+{%- endunless -%}

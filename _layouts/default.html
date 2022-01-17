@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" >
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-
-        {{ content }}
-
-    {% include footer.html %}
-      
-    {% include script.html %}
-
-  </body>
-
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
+-->
+<html>
+	{%- include head.html -%}
+	<body>
+	{{- content -}}
+		{%- include footer.html -%}
+	</body>
 </html>

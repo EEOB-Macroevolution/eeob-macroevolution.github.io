@@ -1,0 +1,40 @@
+{%- comment -%}
+  Create the elements of the navigator bar for the root pages of site
+{%- endcomment -%}
+
+<!-- NavRoot -->
+<nav id="nav">
+  <ul>
+    {%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
+    {%- unless _pages == null -%}
+      {%- assign _pages = _pages | sort: 'order' -%}
+      {%- for _page in _pages -%}
+        {%- assign _title = _page.title | default: _page.layout -%}
+        {%- assign _slug = _title | slugify -%}
+        {%- assign _icon = _page.icon | default: 'fa-link' -%}
+        {%- if _page.icon-style == 'regular' -%}
+          {%- assign _class = 'icon-r' -%}
+        {%- elsif _page.icon-style == 'brands' -%}
+          {%- assign _class = 'icon-b' -%}
+        {%- else -%}
+          {%- assign _class = 'icon' -%}
+        {%- endif -%}
+        {%- comment -%}<!-- page.url (no underscore) is the url of the current page-->{%- endcomment -%}
+        {%- if _page.url == page.url -%}
+          <li><a href="#" id="{{- _slug -}}" class="active">
+            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+          </a></li>
+        {%- elsif _page.url -%}
+          <li><a href="{{- _page.url -}}" id="{{- _slug -}}-link">
+            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+          </a></li>
+        {%- else -%}
+          <li><a href="{{- '/' -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endunless -%}
+    <li><a href="https://eeob-macroevolution.github.io/course-documents/syllabus/sp-2022_EEOB565X_syllabus"><span class="icon fa-check-square">Syllabus</span></a></li>
+    <li><a href="https://github.com/EEOB-Macroevolution/Practicals"><span class="icon fa-laptop">Practicals</span></a></li>
+    <li><a href="https://canvas.iastate.edu/89027"><span class="icon-b fa-empire">Canvas</span></a></li>
+  </ul>
+</nav>

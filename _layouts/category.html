@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{%- include parse-theme-options.html -%}
+{%-if page.navtype != "categories" and page.navtype != "tags" -%}
+  {%- assign _navtype= "categories" -%}
+{%- endif -%}
+{%- assign _navtype= page .navtype |default: "categories" -%}
+{%- include header.html navtype= _navtype -%}
+<div id="main">
+  {%- if page.content != "" -%}
+    {%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+  {%- endif -%}
+  {%- for _col in site.collections -%}
+    <section id="#{{- _col.label -}}" class="shade-one">
+    <h2><a href="#{{- _col.label -}}"> {{ _col.label }} ({{ _col.docs.size }})</a></h2>
+    </section>
+    {%- assign _cats= _col.docs| map: _navtype  | join: ','  | split: ','  | group_by: category -%}
+    {%- for _cat in _cats -%}
+      {%- assign _posts= _col.docs | where: _navtype,_cat.name -%}
+      <section id="#{{- _col.label -}}/{{- _cat.name -}}" class="shade-two">
+        <h3><a href="#{{- _col.label -}}/{{- _cat.name -}}"> {{ _cat.name }} ({{_posts.size}})</a> </h3>
+      </section>
+      <!-- Document List -->
+      {%- for _post in _posts -%}
+        {%- capture _title -%}
+          <a href="{{- _post.url -}}">{{- _post.title -}}</a>
+        {%- endcapture -%}
+        {%- capture _subtitle -%}
+          {% if _post.author -%}{{- _post.author }} | {% endif %}
+          {{- _post.date | date_to_long_string -}}
+        {%- endcapture -%}
+        {%- capture _excerpt -%}<p>{{- _post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+        {%- capture _link -%}<a href="{{- _post.url -}}">{{- _themeOp_readmorelabel -}}</a>{%- endcapture -%}
+        {%- assign _content = _excerpt | append: _link -%}
+        {%- include docreference.html title=_title subtitle=_subtitle content= _excerpt collection=_col.label linktofullpage= _col.output -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endfor -%}
+</div>

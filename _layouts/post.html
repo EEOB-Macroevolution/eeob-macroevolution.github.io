@@ -1,31 +1,27 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="section">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+{%- include parse-theme-options.html -%}
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+	{%- assign _sections = _collection.docs | sort: 'order' -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+	{%- assign _sections = nil -%}
+{%- endif -%}
+{%- include header.html items_nav=_sections linktofullpage= true -%}
 
-      <header class="post-header">
-        <br>
-        <h4 class="post-title orange-text" itemprop="name headline">{{ page.title | escape }}</h4>
-        <p class="post-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-            {{ page.date | date: date_format }}
-          </time>
-          {% if page.author %}
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-          {% endif %}</p>
-      </header>
-
-      <div class="post-content" itemprop="articleBody">
-        {{ content }}
-      </div>
-
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
-    </article>
-    </div>
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="{{- page.url -}}">{{- page.title -}}</a></h2>
+				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
+        {%- include categoriesbar.html categories= page.categories -%}
+		</header>
+	    {{- content -}}
+	  </div>
+	</article>
 </div>
-<script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
