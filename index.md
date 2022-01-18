@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-cover-photo: assets/images/banner2.png
+cover-photo: assets/images/banner4.png
 cover-photo-alt: "phylogeny"
 auto-header: none
 icon: fa-home
