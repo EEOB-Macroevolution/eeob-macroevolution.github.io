@@ -111,3 +111,6 @@ theme-options:
   categorieslabel: "Categories"
   #Label to use for tags
   tagslabel: "Tags"
+
+future: true 
+
