@@ -9,7 +9,7 @@ layout: default
 {%- endcomment -%}
 {%- if page.collection and page.collection != "" -%}
   {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
-	{%- assign _posts = _collection.docs |where: "type", "post" |  sort: 'date' | reverse -%}
+	{%- assign _posts = _collection.docs | where: "type", "post" |  sort: 'date' | reverse -%}
 {%- else -%}
 	{%- assign _posts = site.posts | sort: 'date' | reverse -%}
 {%- endif -%}

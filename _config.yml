@@ -74,7 +74,7 @@ google_analytics:
 # elements that don't have some of these (pages with no category and which have no date) would work
 # by letting empty that separator.
 # For example a page with title "Page" outside any collection woul have a /page.html permalink.
-permalink: /:collection/:categories/:year/:month/:title
+#permalink: /:collection/:categories/:year/:month/:title
 
 #Stablish default layouts for posts and collections
 defaults:
@@ -111,3 +111,6 @@ theme-options:
   categorieslabel: "Categories"
   #Label to use for tags
   tagslabel: "Tags"
+
+future: true 
+
