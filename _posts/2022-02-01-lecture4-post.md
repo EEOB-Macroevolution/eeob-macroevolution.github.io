@@ -5,8 +5,6 @@ icon: fa-lightbulb
 icon-style: regular
 ---
 
-<!-- TBA
-
 ## Beyond the evolutionary synthesis: levels of selection, constraints in macroevolution, contingency though mass extinctions, etc. 
 
 
@@ -14,5 +12,3 @@ icon-style: regular
 selection: How shall we name and generalize
 the unit of Darwinism?_ ([https://doi.org/10.1073/pnas.96.21.11904](https://doi.org/10.1073/pnas.96.21.11904))
 * **Lecture Slides:** [<i class="fas fa-chalkboard-teacher"></i>](https://eeob-macroevolution.github.io/course-documents/lecture-slides/)
-
- -->
