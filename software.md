@@ -14,13 +14,12 @@ The second half of the course will involve hands-on tutorials for methods in mac
 
 <div class="divider"></div>
 
-##### R
+##### R and Rstudio
 
-Install R and the suite of comparative phylogenetic methods packages.
+Detailed instructions for installing R and Rstudio can be found in the [*Getting Started*](https://eeob-macroevolution.github.io/Practicals/Onboarding/Setting_up_R_Rstudio.html) tutorial for this course. The primary tools we will use are:
 
 1. Download and R for your operating system: [https://cran.r-project.org](https://cran.r-project.org/)
 2. We recommend using **RStudio** [https://www.rstudio.com](https://www.rstudio.com/) as your interactive development environment for `R`.
-
 
 <div class="divider"></div>
 
