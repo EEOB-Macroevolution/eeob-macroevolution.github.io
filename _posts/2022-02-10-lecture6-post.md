@@ -15,7 +15,7 @@ icon-style: regular
 
 We will have our first practical exercise on Thursday, Feb. 17. In preparation for that class, you will need to complete the introductory tutorial:
 
-* **At Home Practical:** [*Getting Started with R for Macroevolution* <i class="fas fa-laptop"></i>]([Getting Started with R for Macroevolution](https://eeob-macroevolution.github.io/Practicals/Onboarding/Setting_up_R_Rstudio.html))
+* **At Home Practical:** [*Getting Started with R for Macroevolution* <i class="fas fa-laptop"></i>](https://eeob-macroevolution.github.io/Practicals/Onboarding/Setting_up_R_Rstudio.html)
 * **Troubleshooting:** if you run into any issues or have questions about any of the methods or tools used in the course, you can post to the [Troubleshooting Discussion Thread on Canvas <i class="fas fa-life-ring"></i>](https://canvas.iastate.edu/courses/89027/discussion_topics/1116594)
 * Be sure to bring your laptop to class on Feb. 17! (If you do not have a laptop you can use for practicals in this course, please contact Dr. Adams and Dr. Heath.)
  
