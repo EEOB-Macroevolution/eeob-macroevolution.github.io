@@ -2,7 +2,6 @@
 layout: post
 title: "Theory Lecture - Mar. 8"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Phylogenetic Comparative Methods 1

@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Feb. 1"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Beyond the evolutionary synthesis: levels of selection, constraints in macroevolution, contingency though mass extinctions, etc. 

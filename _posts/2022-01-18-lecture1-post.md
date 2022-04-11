@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Jan. 18"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Introduction & Patterns of diversity in the fossil record

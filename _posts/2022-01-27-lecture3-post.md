@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Jan. 27"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Phenotypic diversity in macroevolution

@@ -2,7 +2,6 @@
 layout: post
 title: "Practical - Mar. 1"
 icon: fa-laptop
-icon-style: regular
 ---
 
 ## Introduction to Phylogenetics in R 

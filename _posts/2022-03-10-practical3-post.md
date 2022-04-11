@@ -2,7 +2,6 @@
 layout: post
 title: "Practical - Mar. 10"
 icon: fa-laptop
-icon-style: regular
 published: true
 ---
 

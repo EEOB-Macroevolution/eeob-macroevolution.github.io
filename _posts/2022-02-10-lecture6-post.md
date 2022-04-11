@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Feb. 10"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Statistical methods for estimating phylogenetic trees (part 1) 

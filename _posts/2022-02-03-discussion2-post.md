@@ -2,7 +2,6 @@
 layout: post
 title: "Discussion: Feb. 3"
 icon: fa-comments
-icon-style: regular
 published: true
 ---
 

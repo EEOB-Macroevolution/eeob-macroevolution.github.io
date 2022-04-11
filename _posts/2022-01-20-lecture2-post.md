@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Jan. 20"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Speciation and extinction fossil record

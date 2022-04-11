@@ -2,7 +2,6 @@
 layout: post
 title: "Practical - Feb. 17"
 icon: fa-laptop
-icon-style: regular
 ---
 
 ## Introduction to R for Macroevolution 

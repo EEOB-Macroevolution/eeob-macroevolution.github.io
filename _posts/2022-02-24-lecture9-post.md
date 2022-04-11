@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Feb. 24"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Bayesian Divergence-Time Estimation

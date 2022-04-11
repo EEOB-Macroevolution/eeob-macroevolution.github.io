@@ -2,7 +2,6 @@
 layout: post
 title: "Lecture - Feb. 22"
 icon: fa-lightbulb
-icon-style: regular
 ---
 
 ## Introduction to Bayesian Inference
