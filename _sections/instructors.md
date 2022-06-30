@@ -30,4 +30,12 @@ order: 3
 		  <p><a href="mailto:phylo@iastate.edu"><i class="fas fa-envelope"></i></a>    <a href="http://phyloworks.org/"><i class="fas fa-globe"></i></a>  <a href="https://github.com/trayc7"><i class="fab fa-github-square"></i></a> <a href="https://twitter.com/trayc7"><i class="fab fa-twitter"></i></a></p>
 		</header>
 	</div>
+	<div class="item">
+		<a href="http://phyloworks.org/" class="image fit"><img src="{{ 'assets/images/josh.jpeg' | relative_url }}" alt="Dr. Tracy Heath"/></a>
+		<header>
+		  <h3>Josh Justison</h3>
+		  <h4>he/him/his</h4>
+		  <p><a href="mailto:justison@iastate.edu"><i class="fas fa-envelope"></i></a> <a href="https://github.com/jjustison"><i class="fab fa-github-square"></i></a></p>
+		</header>
+	</div>
 </div>
